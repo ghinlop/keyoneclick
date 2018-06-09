@@ -1,0 +1,75 @@
+header{
+    border-bottom: 1px solid $color-5;
+}
+nav{
+    aside{
+        display: none;
+        &.uk-open{
+            display: block;
+        }
+        ul>li>a{
+            @include txt-color(#555, $color-5);
+            padding: 8px 10px;
+            display: block;
+        }
+    }
+    >ul>li{
+        >a{
+            display: block;
+            padding: 8px 15px;
+            border-radius: 5px;
+            @include bg-color(transparent, $color-5);
+            @include txt-color(#333, #fff){
+                font-weight: bold;
+            }
+        }
+    }
+}
+.icon-nav{
+    a{
+        width: 35px;
+        height: 35px;
+        position: relative;
+        display: block;
+        @include bg-color(#222, $color-5);
+        @include effect(none);
+        i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include txt-color(#fff);
+            @include transform(translate(-50%, -50%));
+        }
+    }
+}
+.news-slider, .user-nav{
+    a{
+        @include txt-color(#444, $color-5);
+    }
+}
+.product-box{
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    overflow: hidden;
+    @include bg-color(#dee2e6, $color-5){
+        &:hover{
+            border-color: $color-5;
+        }
+    }
+    .product-logo{
+        padding: 10px;
+        background-color: #fff;
+    }
+    .product-title{
+        font-weight: bold;
+        color: #555;
+    }
+    &:hover .product-title{
+        color: #fff;
+    }
+}
+.item-bn{
+    &:not(:last-child){
+        border-right: 1px solid #dee2e6;
+    }
+}

@@ -1,0 +1,44 @@
+<footer>
+
+    <% let bn =[
+        {icon: "bolt", title: "Instant Delivery", desc: "Instant email with premium key"},
+        {icon: "umbrella", title: "Secure Transactions", desc: "SSL encryption & safe payment method"},
+        {icon: "credit-card-alt", title: "Payment Methods", desc: "Wide range of payment methods"},
+        {icon: "medkit", title: "Customer Service", desc: "Instant live chat support"}
+    ];
+%>
+        <section class="bg-light py-3">
+            <div class="container">
+                <div class="row bg-white border border-muted">
+                    <% bn.forEach(function(item){ %>
+                        <div class="col-md-3 py-3 item-bn">
+                            <div class="row align-items-center">
+                                <div class="col-md-3 text-center">
+                                    <i uk-icon="icon: <%= item.icon %>"></i>
+                                </div>
+                                <div class="col-m-9 pl-md-0">
+                                    <span class="text-uppercase uk-text-small font-weight-bold d-block mb-2">
+                                        <%= item.title %>
+                                    </span>
+                                    <span class="uk-text-small d-block">
+                                        <small>
+                                                <%= item.desc %>
+                                        </small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+        </section>
+</footer>
+
+
+<script src="/dist/jquery/jquery-3.3.1.min.js"></script>
+<script src="/dist/gui/js/uikit.min.js"></script>
+<script src="/dist/gui/js/uikit-icons.min.js"></script>
+<script src="/dist/main/js/main.js"></script>
+</body>
+
+</html>
