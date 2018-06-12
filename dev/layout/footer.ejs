@@ -2,9 +2,9 @@
 
     <% let bn =[
         {icon: "bolt", title: "Instant Delivery", desc: "Instant email with premium key"},
-        {icon: "umbrella", title: "Secure Transactions", desc: "SSL encryption & safe payment method"},
-        {icon: "credit-card-alt", title: "Payment Methods", desc: "Wide range of payment methods"},
-        {icon: "medkit", title: "Customer Service", desc: "Instant live chat support"}
+        {icon: "lock", title: "Secure Transactions", desc: "SSL encryption & safe payment method"},
+        {icon: "credit-card", title: "Payment Methods", desc: "Wide range of payment methods"},
+        {icon: "social", title: "Customer Service", desc: "Instant live chat support"}
     ];
 %>
         <section class="bg-light py-3">
@@ -13,16 +13,16 @@
                     <% bn.forEach(function(item){ %>
                         <div class="col-md-3 py-3 item-bn">
                             <div class="row align-items-center">
-                                <div class="col-md-3 text-center">
-                                    <i uk-icon="icon: <%= item.icon %>"></i>
+                                <div class="col-3 text-center">
+                                    <i uk-icon="icon: <%= item.icon %>; ratio: 2.5"></i>
                                 </div>
-                                <div class="col-m-9 pl-md-0">
+                                <div class="col-9 pl-md-0">
                                     <span class="text-uppercase uk-text-small font-weight-bold d-block mb-2">
                                         <%= item.title %>
                                     </span>
                                     <span class="uk-text-small d-block">
                                         <small>
-                                                <%= item.desc %>
+                                            <%= item.desc %>
                                         </small>
                                     </span>
                                 </div>
@@ -32,8 +32,85 @@
                 </div>
             </div>
         </section>
+        <section class="container py-4">
+            <div class="row">
+                <div class="col-md-2 mb-md-0 mb-3">
+                    <h6 class="text-uppercase uk-text-bold">ABOUT MARKET</h6>
+                    <ul class="nolist">
+                        <li>
+                            <a href="">About Us</a>
+                        </li>
+                        <li>
+                            <a href="">Terms of Use</a>
+                        </li>
+                        <li>
+                            <a href="">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h6 class="text-uppercase uk-text-bold">CUSTOMER SERVICE</h6>
+                    <ul class="nolist">
+                        <li>
+                            <a href="">LOOKUP YOUR KEY</a>
+                        </li>
+                        <li>
+                            <a href="">My Account</a>
+                        </li>
+                        <li>
+                            <a href="">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h6 class="text-uppercase uk-text-bold">PAYMENT & SHIPPING</h6>
+                    <ul class="nolist">
+                        <li>
+                            <a href=""></a>How to activate premium</li>
+                        <li>
+                            <a href=""></a>Refund Policy</li>
+                        <li>
+                            <a href=""></a>Estimated Delivery Time</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-md-0 mb-3">
+                    <h6 class="text-uppercase uk-text-bold">KOC TECHNOLOGY COMPANY LIMITED</h6>
+                    <ul class="nolist uk-text-small">
+                        <li>
+                            <i class="mr-1" uk-icon="icon:location"></i>Address: Duy Tan, Cau Giay, Ha Noi</li>
+                        <li>
+                            <i class="mr-1" uk-icon="icon:mail"></i>Email:
+                            <a href="mailto:support@keyoneclick.com">support@keyoneclick.com</a>
+                        </li>
+                        <li>
+                            <i class="mr-1" uk-icon="icon:list"></i>Working: Mon - Sun / 0:00 am - 16:00 pm GMT</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="border-top border-muted py-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-md-left text-center">
+                        <img data-src="/dist/images/visa.png" alt="" class="d-inline" uk-img>
+                    </div>
+                    <div class="col-md-6 text-md-right text-center py-md-0 py-2">
+                        <ul class="nolist d-inline-flex">
+                            <li><a href="" class="uk-icon-button bg-2 text-white mr-1" uk-icon="facebook"></a></li>
+                            <li><a href="" class="uk-icon-button bg-1 text-white mr-1" uk-icon="twitter"></a></li>
+                            <li><a href="" class="uk-icon-button bg-5 text-white mr-1" uk-icon="google-plus"></a></li>
+                            <li><a href="" class="uk-icon-button bg-secondary text-white mr-1" uk-icon="linkedin"></a></li>
+                            <li><a href="" class="uk-icon-button bg-danger text-white mr-1" uk-icon="pinterest"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>'
+        <section class="container text-center py-3">
+            © 2017 Key One Click. All Rights Reserved.
+        </section>
 </footer>
-
+</div>
 
 <script src="/dist/jquery/jquery-3.3.1.min.js"></script>
 <script src="/dist/gui/js/uikit.min.js"></script>

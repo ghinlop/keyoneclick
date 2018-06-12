@@ -1,49 +1,69 @@
 <div class="container">
     <div class="row align-items-center">
         <div class="col-md-3">
-            <a href="/" class="d-block">
-                <img src="/dist/images/logo.png" alt="">
+            <a href="/" class="d-block text-md-left text-center">
+                <img data-src="/dist/images/logo.png" alt="" uk-img>
             </a>
         </div>
         <div class="col-md-9">
             <div class="row align-items-center">
                 <nav class="col-md-8">
-                    <ul class="nolist d-inline-flex text-uppercase">
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li class="--js-dropdown">
-                            <a href="/">Top filesharings</a>
-                            <aside class="shadow w-100 py-0 px-3" uk-dropdown="
-                                mode:hover; 
-                                boundary: .--js-dropdown; 
-                                animation: uk-animation-scale-up; 
-                                duration: 200">
-                                <ul class="nolist row font-weight-bold text-capitalize">
-                                    <li class="col-md-4">
-                                        <a href="">1fichier.com</a>
-                                    </li>
-                                    <li class="col-md-4">
-                                        <a href="">1fichier.com</a>
-                                    </li>
-                                    <li class="col-md-4">
-                                        <a href="">1fichier.com</a>
-                                    </li>
-                                    <li class="col-md-4">
-                                        <a href="">1fichier.com</a>
-                                    </li>
-                                    <li class="col-md-4">
-                                        <a href="">1fichier.com</a>
-                                    </li>
-                                </ul>
-                            </aside>
-                        </li>
-                        <li>
-                            <a href="/">lookup key</a>
-                        </li>
-                    </ul>
+                    <div id="offcanvas-overlay" uk-offcanvas="mode: push; overlay: true">
+                        <div class="uk-offcanvas-bar">
+                            <ul class="nolist d-md-inline-flex text-uppercase nav-header">
+                                <li class="d-md-none">
+                                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+                                </li>
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+                                <li class="--js-dropdown d-md-block d-none">
+                                    <a href="/">Top filesharings</a>
+                                    <aside class="shadow w-100 py-0 px-3" uk-dropdown="
+                                                        mode:hover; 
+                                                        boundary: .--js-dropdown; 
+                                                        animation: uk-animation-scale-up; 
+                                                        duration: 200">
+                                        <ul class="nolist row font-weight-bold text-capitalize py-md-3 bg-white">
+                                            <li class="col-md-4">
+                                                <a href="">1fichier.com</a>
+                                            </li>
+                                            <li class="col-md-4">
+                                                <a href="">1fichier.com</a>
+                                            </li>
+                                            <li class="col-md-4">
+                                                <a href="">1fichier.com</a>
+                                            </li>
+                                            <li class="col-md-4">
+                                                <a href="">1fichier.com</a>
+                                            </li>
+                                            <li class="col-md-4">
+                                                <a href="">1fichier.com</a>
+                                            </li>
+                                        </ul>
+                                    </aside>
+                                </li>
+                                <li>
+                                    <a href="/">lookup key</a>
+                                </li>
+                                <li class="d-md-none">
+                                    <a href="#">Login</a>
+                                </li>
+                                <li class="d-md-none">
+                                    <a href="#">Register</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <%- include('./slider.ejs') -%>
                 </nav>
-                <div class="col-md-4">
+                <div class="col-6 d-md-none icon-nav">
+                    <a href="#" uk-toggle="target: #offcanvas-overlay">
+                        <i uk-icon="menu"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 col-6 align-items-center text-right">
                     <ul class="nolist d-inline-flex icon-nav align-items-center">
                         <!-- <li class="mr-md-2 --js-search">
                             <a href="#">
@@ -65,43 +85,92 @@
                         </li> -->
                         <li classs="--js-cart">
                             <div class="d-inline-flex align-items-center">
-                                <a class="bg-5" href="#">
-                                    <i uk-icon="icon: cart; ratio: 0.8"></i>
+                                <a class="icon-a bg-5 float-right" href="#">
+                                    <i uk-icon="icon: cart; ratio: 1.2"></i>
                                 </a>
-                                <div class="px-1">
+                                <div class="px-1 d-md-block d-none">
                                     <span class="text-uppercase font-weight-bold d-block uk-text-small">shopping cart</span>
                                     <span class="uk-text-small line-0">0 item</span> -
                                     <span class="uk-text-small text-danger line-0">$0,00</span>
                                 </div>
                             </div>
-                            <div class="bg-light w-100" uk-dropdown="mode: click; pos: bottom-right">
-                                <div class="d-block text-center">
+                            <div class="bg-light w-100 p-0" uk-dropdown="mode: click; pos: bottom-right">
+                                <div class="d-block text-center p-3">
                                     You have no items in your shopping cart.
+                                </div>
+                                <div class="d-block">
+                                    <div class="px-3">
+                                        <div class="bg-dark row text-white py-2">
+                                            <div class="col-6 text-left">
+                                                Your Product
+                                            </div>
+                                            <div class="col-6 text-right">
+                                                Price
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-cart">
+                                        <table class="uk-table uk-table-middle uk-table-small uk-text-small">
+                                            <tbody>
+                                                <% for(let i = 0; i < 8; i++){ %>
+                                                    <tr>
+                                                        <td class="px-3">
+                                                            <a href="/plan.html">
+                                                                <small> BigFile Premium 90 days</small>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" value="1" class="uk-input uk-form-small uk-form-width-xsmall text-center">
+                                                        </td>
+                                                        <td>
+                                                            <label for="" class="badge badge-dark p-2">$29,00</label>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#">
+                                                                <i uk-icon="icon: trash; ratio: 0.8"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <% } %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="px-3">
+                                        <div class="bg-muted row text-white py-2 align-items-center">
+                                            <div class="col-6 text-left text-uppercase text-dark">
+                                                CART SUBTOTAL
+                                            </div>
+                                            <div class="col-6 uk-text-large text-right text-danger">
+                                                $49.00
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-block border-top border-muted p-3">
+                                        <a href="/payment.html" class="uk-button uk-button-secondary">View cart</a>
+                                        <button class="uk-button uk-button-secondary ml-1">Check out</button>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                     </ul>
-                </div>
-                </nav>
-            </div>
-            <div class="row align-items-center">
-                <%- include('./slider.ejs') -%>
-                    <div class="col-md-4 user-nav">
+                    <div class="user-nav d-md-block d-none">
                         <div class="d-md-inline-flex uk-text-small align-items-center w-100">
-                            <a class="align-items-center flex-1" href="#">
+                            <a class="align-items-center flex-1" href="/auth.html">
                                 <i class="mr-md-1 fa fa-user-plus"></i>
                                 <span>Register</span>
                             </a>
-                            <a class="align-items-center flex-1" href="#">
+                            <a class="align-items-center flex-1" href="/auth.html">
                                 <i class="mr-md-1 fa fa-lock"></i>
                                 <span>Register</span>
                             </a>
-                            <a class="align-items-center flex-1" href="#">
+                            <a class="align-items-center flex-1" href="/payment.html">
                                 <i class="mr-md-1 fa fa-check-square"></i>
                                 <span>Checkout</span>
                             </a>
                         </div>
                     </div>
+                </div>
+                </nav>
             </div>
         </div>
     </div>

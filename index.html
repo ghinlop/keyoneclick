@@ -35,95 +35,67 @@
     <link rel="stylesheet" href="/dist/main/css/main.css" />
     <title>Document</title>
 </head>
-<body>    <header class="py-3">
+<body>
+    <div class="uk-offcanvas-content">    <header class="py-3">
         <div class="container">
     <div class="row align-items-center">
         <div class="col-md-3">
-            <a href="/" class="d-block">
-                <img src="/dist/images/logo.png" alt="">
+            <a href="/" class="d-block text-md-left text-center">
+                <img data-src="/dist/images/logo.png" alt="" uk-img>
             </a>
         </div>
         <div class="col-md-9">
             <div class="row align-items-center">
                 <nav class="col-md-8">
-                    <ul class="nolist d-inline-flex text-uppercase">
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li class="--js-dropdown">
-                            <a href="/">Top filesharings</a>
-                            <aside class="shadow w-100 py-0 px-3" uk-dropdown="
-                                mode:hover; 
-                                boundary: .--js-dropdown; 
-                                animation: uk-animation-scale-up; 
-                                duration: 200">
-                                <ul class="nolist row font-weight-bold text-capitalize">
-                                    <li class="col-md-4">
-                                        <a href="">1fichier.com</a>
-                                    </li>
-                                    <li class="col-md-4">
-                                        <a href="">1fichier.com</a>
-                                    </li>
-                                    <li class="col-md-4">
-                                        <a href="">1fichier.com</a>
-                                    </li>
-                                    <li class="col-md-4">
-                                        <a href="">1fichier.com</a>
-                                    </li>
-                                    <li class="col-md-4">
-                                        <a href="">1fichier.com</a>
-                                    </li>
-                                </ul>
-                            </aside>
-                        </li>
-                        <li>
-                            <a href="/">lookup key</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="col-md-4">
-                    <ul class="nolist d-inline-flex icon-nav align-items-center">
-                        <!-- <li class="mr-md-2 --js-search">
-                            <a href="#">
-                                <i uk-icon="icon: search; ratio: 0.8"></i>
-                            </a>
-                            <div class="p-0" uk-dropdown="
-                            pos: bottom-right;
-                            mode:hover; 
-                            boundary: .--js-search; 
-                            animation: uk-animation-scale-up; 
-                            duration: 200">
-                                <form action="">
-                                    <div class="uk-inline">
-                                        <button class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
-                                        <input class="uk-input" type="text">
-                                    </div>
-                                </form>
-                            </div>
-                        </li> -->
-                        <li classs="--js-cart">
-                            <div class="d-inline-flex align-items-center">
-                                <a class="bg-5" href="#">
-                                    <i uk-icon="icon: cart; ratio: 0.8"></i>
-                                </a>
-                                <div class="px-1">
-                                    <span class="text-uppercase font-weight-bold d-block uk-text-small">shopping cart</span>
-                                    <span class="uk-text-small line-0">0 item</span> -
-                                    <span class="uk-text-small text-danger line-0">$0,00</span>
-                                </div>
-                            </div>
-                            <div class="bg-light w-100" uk-dropdown="mode: click; pos: bottom-right">
-                                <div class="d-block text-center">
-                                    You have no items in your shopping cart.
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                </nav>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-8 uk-position-relative uk-visible-toggle uk-light" uk-slideshow="
+                    <div id="offcanvas-overlay" uk-offcanvas="mode: push; overlay: true">
+                        <div class="uk-offcanvas-bar">
+                            <ul class="nolist d-md-inline-flex text-uppercase nav-header">
+                                <li class="d-md-none">
+                                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+                                </li>
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+                                <li class="--js-dropdown d-md-block d-none">
+                                    <a href="/">Top filesharings</a>
+                                    <aside class="shadow w-100 py-0 px-3" uk-dropdown="
+                                                        mode:hover; 
+                                                        boundary: .--js-dropdown; 
+                                                        animation: uk-animation-scale-up; 
+                                                        duration: 200">
+                                        <ul class="nolist row font-weight-bold text-capitalize py-md-3 bg-white">
+                                            <li class="col-md-4">
+                                                <a href="">1fichier.com</a>
+                                            </li>
+                                            <li class="col-md-4">
+                                                <a href="">1fichier.com</a>
+                                            </li>
+                                            <li class="col-md-4">
+                                                <a href="">1fichier.com</a>
+                                            </li>
+                                            <li class="col-md-4">
+                                                <a href="">1fichier.com</a>
+                                            </li>
+                                            <li class="col-md-4">
+                                                <a href="">1fichier.com</a>
+                                            </li>
+                                        </ul>
+                                    </aside>
+                                </li>
+                                <li>
+                                    <a href="/">lookup key</a>
+                                </li>
+                                <li class="d-md-none">
+                                    <a href="#">Login</a>
+                                </li>
+                                <li class="d-md-none">
+                                    <a href="#">Register</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="
                 autoplay: true;
                 autoplay-interval: 5000;
                 sets: true;
@@ -153,22 +125,253 @@
             Why is <span class="text-warning">KeyOneClick</span>?
         </a>
     </div>
-</div>                    <div class="col-md-4 user-nav">
+</div>                </nav>
+                <div class="col-6 d-md-none icon-nav">
+                    <a href="#" uk-toggle="target: #offcanvas-overlay">
+                        <i uk-icon="menu"></i>
+                    </a>
+                </div>
+                <div class="col-md-4 col-6 align-items-center text-right">
+                    <ul class="nolist d-inline-flex icon-nav align-items-center">
+                        <!-- <li class="mr-md-2 --js-search">
+                            <a href="#">
+                                <i uk-icon="icon: search; ratio: 0.8"></i>
+                            </a>
+                            <div class="p-0" uk-dropdown="
+                            pos: bottom-right;
+                            mode:hover; 
+                            boundary: .--js-search; 
+                            animation: uk-animation-scale-up; 
+                            duration: 200">
+                                <form action="">
+                                    <div class="uk-inline">
+                                        <button class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></button>
+                                        <input class="uk-input" type="text">
+                                    </div>
+                                </form>
+                            </div>
+                        </li> -->
+                        <li classs="--js-cart">
+                            <div class="d-inline-flex align-items-center">
+                                <a class="icon-a bg-5 float-right" href="#">
+                                    <i uk-icon="icon: cart; ratio: 1.2"></i>
+                                </a>
+                                <div class="px-1 d-md-block d-none">
+                                    <span class="text-uppercase font-weight-bold d-block uk-text-small">shopping cart</span>
+                                    <span class="uk-text-small line-0">0 item</span> -
+                                    <span class="uk-text-small text-danger line-0">$0,00</span>
+                                </div>
+                            </div>
+                            <div class="bg-light w-100 p-0" uk-dropdown="mode: click; pos: bottom-right">
+                                <div class="d-block text-center p-3">
+                                    You have no items in your shopping cart.
+                                </div>
+                                <div class="d-block">
+                                    <div class="px-3">
+                                        <div class="bg-dark row text-white py-2">
+                                            <div class="col-6 text-left">
+                                                Your Product
+                                            </div>
+                                            <div class="col-6 text-right">
+                                                Price
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-cart">
+                                        <table class="uk-table uk-table-middle uk-table-small uk-text-small">
+                                            <tbody>
+                                                
+                                                    <tr>
+                                                        <td class="px-3">
+                                                            <a href="/plan.html">
+                                                                <small> BigFile Premium 90 days</small>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" value="1" class="uk-input uk-form-small uk-form-width-xsmall text-center">
+                                                        </td>
+                                                        <td>
+                                                            <label for="" class="badge badge-dark p-2">$29,00</label>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#">
+                                                                <i uk-icon="icon: trash; ratio: 0.8"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td class="px-3">
+                                                            <a href="/plan.html">
+                                                                <small> BigFile Premium 90 days</small>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" value="1" class="uk-input uk-form-small uk-form-width-xsmall text-center">
+                                                        </td>
+                                                        <td>
+                                                            <label for="" class="badge badge-dark p-2">$29,00</label>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#">
+                                                                <i uk-icon="icon: trash; ratio: 0.8"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td class="px-3">
+                                                            <a href="/plan.html">
+                                                                <small> BigFile Premium 90 days</small>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" value="1" class="uk-input uk-form-small uk-form-width-xsmall text-center">
+                                                        </td>
+                                                        <td>
+                                                            <label for="" class="badge badge-dark p-2">$29,00</label>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#">
+                                                                <i uk-icon="icon: trash; ratio: 0.8"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td class="px-3">
+                                                            <a href="/plan.html">
+                                                                <small> BigFile Premium 90 days</small>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" value="1" class="uk-input uk-form-small uk-form-width-xsmall text-center">
+                                                        </td>
+                                                        <td>
+                                                            <label for="" class="badge badge-dark p-2">$29,00</label>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#">
+                                                                <i uk-icon="icon: trash; ratio: 0.8"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td class="px-3">
+                                                            <a href="/plan.html">
+                                                                <small> BigFile Premium 90 days</small>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" value="1" class="uk-input uk-form-small uk-form-width-xsmall text-center">
+                                                        </td>
+                                                        <td>
+                                                            <label for="" class="badge badge-dark p-2">$29,00</label>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#">
+                                                                <i uk-icon="icon: trash; ratio: 0.8"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td class="px-3">
+                                                            <a href="/plan.html">
+                                                                <small> BigFile Premium 90 days</small>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" value="1" class="uk-input uk-form-small uk-form-width-xsmall text-center">
+                                                        </td>
+                                                        <td>
+                                                            <label for="" class="badge badge-dark p-2">$29,00</label>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#">
+                                                                <i uk-icon="icon: trash; ratio: 0.8"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td class="px-3">
+                                                            <a href="/plan.html">
+                                                                <small> BigFile Premium 90 days</small>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" value="1" class="uk-input uk-form-small uk-form-width-xsmall text-center">
+                                                        </td>
+                                                        <td>
+                                                            <label for="" class="badge badge-dark p-2">$29,00</label>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#">
+                                                                <i uk-icon="icon: trash; ratio: 0.8"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td class="px-3">
+                                                            <a href="/plan.html">
+                                                                <small> BigFile Premium 90 days</small>
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" value="1" class="uk-input uk-form-small uk-form-width-xsmall text-center">
+                                                        </td>
+                                                        <td>
+                                                            <label for="" class="badge badge-dark p-2">$29,00</label>
+                                                        </td>
+                                                        <td>
+                                                            <a href="#">
+                                                                <i uk-icon="icon: trash; ratio: 0.8"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="px-3">
+                                        <div class="bg-muted row text-white py-2 align-items-center">
+                                            <div class="col-6 text-left text-uppercase text-dark">
+                                                CART SUBTOTAL
+                                            </div>
+                                            <div class="col-6 uk-text-large text-right text-danger">
+                                                $49.00
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-block border-top border-muted p-3">
+                                        <a href="/payment.html" class="uk-button uk-button-secondary">View cart</a>
+                                        <button class="uk-button uk-button-secondary ml-1">Check out</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="user-nav d-md-block d-none">
                         <div class="d-md-inline-flex uk-text-small align-items-center w-100">
-                            <a class="align-items-center flex-1" href="#">
+                            <a class="align-items-center flex-1" href="/auth.html">
                                 <i class="mr-md-1 fa fa-user-plus"></i>
                                 <span>Register</span>
                             </a>
-                            <a class="align-items-center flex-1" href="#">
+                            <a class="align-items-center flex-1" href="/auth.html">
                                 <i class="mr-md-1 fa fa-lock"></i>
                                 <span>Register</span>
                             </a>
-                            <a class="align-items-center flex-1" href="#">
+                            <a class="align-items-center flex-1" href="/payment.html">
                                 <i class="mr-md-1 fa fa-check-square"></i>
                                 <span>Checkout</span>
                             </a>
                         </div>
                     </div>
+                </div>
+                </nav>
             </div>
         </div>
     </div>    </header>
@@ -188,291 +391,641 @@
             <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: search"></span>
         </div>
     </div>
-</section>            
+</section>        
     <section class="mt-4">
         <div class="row" id="--js-product-show">
             
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/fileboom-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/fileboom-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>FileBoom.me</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            FileBoom.me
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/keep2share-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/keep2share-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Keep2share.cc</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Keep2share.cc
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/filenext-premium-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/filenext-premium-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Filenext.Com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Filenext.Com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/file-all-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/file-all-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>File.al Premium</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            File.al Premium
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/Katfile-premium-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/Katfile-premium-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Katfile.Com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Katfile.Com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/filejoker-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/filejoker-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Filejoker.net</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Filejoker.net
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/cloudghost-premium-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/cloudghost-premium-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>CloudGhost.Net</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            CloudGhost.Net
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/alldebrid-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/alldebrid-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>AllDebrid.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            AllDebrid.com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/rapidgator-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/rapidgator-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Rapidgator.net</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Rapidgator.net
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/filesmonster-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/filesmonster-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Filesmonster.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Filesmonster.com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/filespace-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/filespace-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Filespace.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Filespace.com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/xubster-com-premium-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/xubster-com-premium-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Xubster.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Xubster.com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/depositfiles-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/depositfiles-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>DepositFiles.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            DepositFiles.com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/turbobit-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/turbobit-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>TurboBit.net</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            TurboBit.net
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/novafile-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/novafile-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Novafile.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Novafile.com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/uploadboy-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/uploadboy-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>UploadBoy.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            UploadBoy.com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/debriditalia-premium-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/debriditalia-premium-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>DebridItalia.Com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            DebridItalia.Com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/daofile-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/daofile-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Daofile.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Daofile.com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/easybytez-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/easybytez-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>EasyBytez.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            EasyBytez.com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/filefactory-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/filefactory-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Filefactory.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Filefactory.com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/filevega-premium-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/filevega-premium-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Filevega.Com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Filevega.Com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/hotlink.cc-paypal-reseller-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/hotlink.cc-paypal-reseller-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Hotlink.cc</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Hotlink.cc
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/mountfile-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/mountfile-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Mountfile.net</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Mountfile.net
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/Premiumax-premium-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/Premiumax-premium-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Premiumax.Net</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Premiumax.Net
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/Rapidrar-premium-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/Rapidrar-premium-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Rapidrar.Com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Rapidrar.Com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/real-debrid-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/real-debrid-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Real-Debrid.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Real-Debrid.com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/subyshare-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/subyshare-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Subyshare.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Subyshare.com
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/takefile-paypal-reseller-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/takefile-paypal-reseller-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Takefile.link</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Takefile.link
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/upload-cd-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/upload-cd-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Upload.cd</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Upload.cd
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/hitfile-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/hitfile-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Hitfile.net</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Hitfile.net
+                        </div>
                     </div>
                 </a>
-            
-                <a href="#" class="col-md-3 col-6 mb-3">
-                    <div class="product-box text-center">
+                
+                <a href="#--js-product-detailt" class="col-md-3 col-6 mb-3" uk-toggle>
+                    <div class="product-box text-center uk-box-shadow-hover-large">
                         <div class="product-logo">
-                            <img src="/dist/images/logo/ex-load-premium-key-200x75.png" alt="">
+                            <img data-src="/dist/images/logo/ex-load-premium-key-200x75.png" alt="" uk-img>
                         </div>
-                        <div class="product-title d-block uk-text-small py-2" gh-item>Ex-load.com</div>
+                        <div class="product-title d-block uk-text-small py-2" gh-item>
+                            Ex-load.com
+                        </div>
                     </div>
                 </a>
-            
+                
         </div>
-    </section>    </main>
+    </section>
+    <div id="--js-product-detailt" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body h-100">
+            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+            <div class="uk-modal-title d-md-inline-flex d-block align-items-center border-bottom border-muted w-100 pb-3">
+                <div class="modal-logo">
+                    <img alt="" data-src="/dist/images/logo/ex-load-premium-key-200x75.png" uk-img>
+                </div>
+                <div class="ml-md-2">
+                    <big>Ex-load.com</big>
+                    <a href="/plan.html" uk-icon="icon: sign-in; ratio: 1.5"></a>
+                    <p class="uk-text-small">Put your Premium token / Premium key in "Enter Token" , and click on "Continue"</p>
+                </div>
+            </div>
+            <div class="uk-visible-toggle uk-position-relative" uk-slider="autoplay: true; autoplay-interval: 6000">
+                <div class="mt-3 uk-slider-items" uk-grid>
+                    
+                        <div class="uk-width-1-4@l uk-width-1-3@m uk-width-1-2@s">
+                            <div class="plan-box text-center uk-box-shadow-hover-large">
+                                <a href="#">
+                                    <h6 class="text-dark uk-text-small text-uppercase">Datafile Premium 90 days</h6>
+                                </a>
+                                <h4 class="text-danger">$45</h4>
+                                <ul class="nolist uk-text-small">
+                                    <li class="color-5">
+                                        <i uk-icon="icon: check; ratio: 0.7"></i>In stock</li>
+                                    <li>NO waiting</li>
+                                    <li>Maximum download speed</li>
+                                    <li>Resume support</li>
+                                </ul>
+                                <div class="d-inline-flex w-100 mt-4">
+                                    <div class="flex-1">
+                                        <a href="" class="btn btn-warning rounded-0 text-uppercase">Buy now</a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <a href="" class="btn btn-outline-warning px-3 text-uppercase">Add Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="uk-width-1-4@l uk-width-1-3@m uk-width-1-2@s">
+                            <div class="plan-box text-center uk-box-shadow-hover-large">
+                                <a href="#">
+                                    <h6 class="text-dark uk-text-small text-uppercase">Datafile Premium 90 days</h6>
+                                </a>
+                                <h4 class="text-danger">$45</h4>
+                                <ul class="nolist uk-text-small">
+                                    <li class="color-5">
+                                        <i uk-icon="icon: check; ratio: 0.7"></i>In stock</li>
+                                    <li>NO waiting</li>
+                                    <li>Maximum download speed</li>
+                                    <li>Resume support</li>
+                                </ul>
+                                <div class="d-inline-flex w-100 mt-4">
+                                    <div class="flex-1">
+                                        <a href="" class="btn btn-warning rounded-0 text-uppercase">Buy now</a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <a href="" class="btn btn-outline-warning px-3 text-uppercase">Add Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="uk-width-1-4@l uk-width-1-3@m uk-width-1-2@s">
+                            <div class="plan-box text-center uk-box-shadow-hover-large">
+                                <a href="#">
+                                    <h6 class="text-dark uk-text-small text-uppercase">Datafile Premium 90 days</h6>
+                                </a>
+                                <h4 class="text-danger">$45</h4>
+                                <ul class="nolist uk-text-small">
+                                    <li class="color-5">
+                                        <i uk-icon="icon: check; ratio: 0.7"></i>In stock</li>
+                                    <li>NO waiting</li>
+                                    <li>Maximum download speed</li>
+                                    <li>Resume support</li>
+                                </ul>
+                                <div class="d-inline-flex w-100 mt-4">
+                                    <div class="flex-1">
+                                        <a href="" class="btn btn-warning rounded-0 text-uppercase">Buy now</a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <a href="" class="btn btn-outline-warning px-3 text-uppercase">Add Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="uk-width-1-4@l uk-width-1-3@m uk-width-1-2@s">
+                            <div class="plan-box text-center uk-box-shadow-hover-large">
+                                <a href="#">
+                                    <h6 class="text-dark uk-text-small text-uppercase">Datafile Premium 90 days</h6>
+                                </a>
+                                <h4 class="text-danger">$45</h4>
+                                <ul class="nolist uk-text-small">
+                                    <li class="color-5">
+                                        <i uk-icon="icon: check; ratio: 0.7"></i>In stock</li>
+                                    <li>NO waiting</li>
+                                    <li>Maximum download speed</li>
+                                    <li>Resume support</li>
+                                </ul>
+                                <div class="d-inline-flex w-100 mt-4">
+                                    <div class="flex-1">
+                                        <a href="" class="btn btn-warning rounded-0 text-uppercase">Buy now</a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <a href="" class="btn btn-outline-warning px-3 text-uppercase">Add Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="uk-width-1-4@l uk-width-1-3@m uk-width-1-2@s">
+                            <div class="plan-box text-center uk-box-shadow-hover-large">
+                                <a href="#">
+                                    <h6 class="text-dark uk-text-small text-uppercase">Datafile Premium 90 days</h6>
+                                </a>
+                                <h4 class="text-danger">$45</h4>
+                                <ul class="nolist uk-text-small">
+                                    <li class="color-5">
+                                        <i uk-icon="icon: check; ratio: 0.7"></i>In stock</li>
+                                    <li>NO waiting</li>
+                                    <li>Maximum download speed</li>
+                                    <li>Resume support</li>
+                                </ul>
+                                <div class="d-inline-flex w-100 mt-4">
+                                    <div class="flex-1">
+                                        <a href="" class="btn btn-warning rounded-0 text-uppercase">Buy now</a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <a href="" class="btn btn-outline-warning px-3 text-uppercase">Add Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="uk-width-1-4@l uk-width-1-3@m uk-width-1-2@s">
+                            <div class="plan-box text-center uk-box-shadow-hover-large">
+                                <a href="#">
+                                    <h6 class="text-dark uk-text-small text-uppercase">Datafile Premium 90 days</h6>
+                                </a>
+                                <h4 class="text-danger">$45</h4>
+                                <ul class="nolist uk-text-small">
+                                    <li class="color-5">
+                                        <i uk-icon="icon: check; ratio: 0.7"></i>In stock</li>
+                                    <li>NO waiting</li>
+                                    <li>Maximum download speed</li>
+                                    <li>Resume support</li>
+                                </ul>
+                                <div class="d-inline-flex w-100 mt-4">
+                                    <div class="flex-1">
+                                        <a href="" class="btn btn-warning rounded-0 text-uppercase">Buy now</a>
+                                    </div>
+                                    <div class="flex-1">
+                                        <a href="" class="btn btn-outline-warning px-3 text-uppercase">Add Cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                </div>
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+            </div>
+            <div class="border rounded border-warning mt-3 p-3">
+                <h5 class="text-uppercase uk-text-bold pb-3 border-bottom border-muted">
+                    HOW TO ACTIVATE FILEFACTORY PREMIUM TOKEN ?
+                </h5>
+                <ol>
+                    <li>
+                        You will receive a Premium token / Premium key like this: 6299B875F866A13CAAAAAAAAAAA
+                    </li>
+                    <li>
+                        Login into to your FileFactory account.
+                    </li>
+                    <li>
+                        Put your Premium token / Premium key in "Enter Token" , and click on "Continue"
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>        <section class="container pl-md-0 py-4">
+    <h4 class="py-3 mb-4 border-bottom border-muted text-uppercase">
+        POPULAR PRODUCTS
+    </h4>
+    <div class="row">
+        
+            <div class="col-md-3 mb-md-0 mb-3">
+                <div class="plan-box text-center uk-box-shadow-hover-large">
+                    <a href="#">
+                        <h6 class="text-dark uk-text-small text-uppercase">Datafile Premium 90 days</h6>
+                    </a>
+                    <h4 class="text-danger">$45</h4>
+                    <ul class="nolist uk-text-small">
+                        <li class="color-5">
+                            <i uk-icon="icon: check; ratio: 0.7"></i>In stock</li>
+                        <li>NO waiting</li>
+                        <li>Maximum download speed</li>
+                        <li>Resume support</li>
+                    </ul>
+                    <div class="d-inline-flex w-100 mt-4">
+                        <div class="flex-1">
+                            <a href="/payment.html" class="btn btn-warning rounded-0 text-uppercase">Buy now</a>
+                        </div>
+                        <div class="flex-1">
+                            <a href="" class="btn btn-outline-warning px-3 text-uppercase">Add Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-md-0 mb-3">
+                <div class="plan-box text-center uk-box-shadow-hover-large">
+                    <a href="#">
+                        <h6 class="text-dark uk-text-small text-uppercase">Datafile Premium 90 days</h6>
+                    </a>
+                    <h4 class="text-danger">$45</h4>
+                    <ul class="nolist uk-text-small">
+                        <li class="color-5">
+                            <i uk-icon="icon: check; ratio: 0.7"></i>In stock</li>
+                        <li>NO waiting</li>
+                        <li>Maximum download speed</li>
+                        <li>Resume support</li>
+                    </ul>
+                    <div class="d-inline-flex w-100 mt-4">
+                        <div class="flex-1">
+                            <a href="/payment.html" class="btn btn-warning rounded-0 text-uppercase">Buy now</a>
+                        </div>
+                        <div class="flex-1">
+                            <a href="" class="btn btn-outline-warning px-3 text-uppercase">Add Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-md-0 mb-3">
+                <div class="plan-box text-center uk-box-shadow-hover-large">
+                    <a href="#">
+                        <h6 class="text-dark uk-text-small text-uppercase">Datafile Premium 90 days</h6>
+                    </a>
+                    <h4 class="text-danger">$45</h4>
+                    <ul class="nolist uk-text-small">
+                        <li class="color-5">
+                            <i uk-icon="icon: check; ratio: 0.7"></i>In stock</li>
+                        <li>NO waiting</li>
+                        <li>Maximum download speed</li>
+                        <li>Resume support</li>
+                    </ul>
+                    <div class="d-inline-flex w-100 mt-4">
+                        <div class="flex-1">
+                            <a href="/payment.html" class="btn btn-warning rounded-0 text-uppercase">Buy now</a>
+                        </div>
+                        <div class="flex-1">
+                            <a href="" class="btn btn-outline-warning px-3 text-uppercase">Add Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-md-0 mb-3">
+                <div class="plan-box text-center uk-box-shadow-hover-large">
+                    <a href="#">
+                        <h6 class="text-dark uk-text-small text-uppercase">Datafile Premium 90 days</h6>
+                    </a>
+                    <h4 class="text-danger">$45</h4>
+                    <ul class="nolist uk-text-small">
+                        <li class="color-5">
+                            <i uk-icon="icon: check; ratio: 0.7"></i>In stock</li>
+                        <li>NO waiting</li>
+                        <li>Maximum download speed</li>
+                        <li>Resume support</li>
+                    </ul>
+                    <div class="d-inline-flex w-100 mt-4">
+                        <div class="flex-1">
+                            <a href="/payment.html" class="btn btn-warning rounded-0 text-uppercase">Buy now</a>
+                        </div>
+                        <div class="flex-1">
+                            <a href="" class="btn btn-outline-warning px-3 text-uppercase">Add Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+</section>
+
+    </main>
     <footer>
 
     
@@ -482,16 +1035,16 @@
                     
                         <div class="col-md-3 py-3 item-bn">
                             <div class="row align-items-center">
-                                <div class="col-md-3 text-center">
-                                    <i uk-icon="icon: bolt"></i>
+                                <div class="col-3 text-center">
+                                    <i uk-icon="icon: bolt; ratio: 2.5"></i>
                                 </div>
-                                <div class="col-m-9 pl-md-0">
+                                <div class="col-9 pl-md-0">
                                     <span class="text-uppercase uk-text-small font-weight-bold d-block mb-2">
                                         Instant Delivery
                                     </span>
                                     <span class="uk-text-small d-block">
                                         <small>
-                                                Instant email with premium key
+                                            Instant email with premium key
                                         </small>
                                     </span>
                                 </div>
@@ -500,16 +1053,16 @@
                         
                         <div class="col-md-3 py-3 item-bn">
                             <div class="row align-items-center">
-                                <div class="col-md-3 text-center">
-                                    <i uk-icon="icon: umbrella"></i>
+                                <div class="col-3 text-center">
+                                    <i uk-icon="icon: lock; ratio: 2.5"></i>
                                 </div>
-                                <div class="col-m-9 pl-md-0">
+                                <div class="col-9 pl-md-0">
                                     <span class="text-uppercase uk-text-small font-weight-bold d-block mb-2">
                                         Secure Transactions
                                     </span>
                                     <span class="uk-text-small d-block">
                                         <small>
-                                                SSL encryption &amp; safe payment method
+                                            SSL encryption &amp; safe payment method
                                         </small>
                                     </span>
                                 </div>
@@ -518,16 +1071,16 @@
                         
                         <div class="col-md-3 py-3 item-bn">
                             <div class="row align-items-center">
-                                <div class="col-md-3 text-center">
-                                    <i uk-icon="icon: credit-card-alt"></i>
+                                <div class="col-3 text-center">
+                                    <i uk-icon="icon: credit-card; ratio: 2.5"></i>
                                 </div>
-                                <div class="col-m-9 pl-md-0">
+                                <div class="col-9 pl-md-0">
                                     <span class="text-uppercase uk-text-small font-weight-bold d-block mb-2">
                                         Payment Methods
                                     </span>
                                     <span class="uk-text-small d-block">
                                         <small>
-                                                Wide range of payment methods
+                                            Wide range of payment methods
                                         </small>
                                     </span>
                                 </div>
@@ -536,16 +1089,16 @@
                         
                         <div class="col-md-3 py-3 item-bn">
                             <div class="row align-items-center">
-                                <div class="col-md-3 text-center">
-                                    <i uk-icon="icon: medkit"></i>
+                                <div class="col-3 text-center">
+                                    <i uk-icon="icon: social; ratio: 2.5"></i>
                                 </div>
-                                <div class="col-m-9 pl-md-0">
+                                <div class="col-9 pl-md-0">
                                     <span class="text-uppercase uk-text-small font-weight-bold d-block mb-2">
                                         Customer Service
                                     </span>
                                     <span class="uk-text-small d-block">
                                         <small>
-                                                Instant live chat support
+                                            Instant live chat support
                                         </small>
                                     </span>
                                 </div>
@@ -555,8 +1108,85 @@
                 </div>
             </div>
         </section>
+        <section class="container py-4">
+            <div class="row">
+                <div class="col-md-2 mb-md-0 mb-3">
+                    <h6 class="text-uppercase uk-text-bold">ABOUT MARKET</h6>
+                    <ul class="nolist">
+                        <li>
+                            <a href="">About Us</a>
+                        </li>
+                        <li>
+                            <a href="">Terms of Use</a>
+                        </li>
+                        <li>
+                            <a href="">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h6 class="text-uppercase uk-text-bold">CUSTOMER SERVICE</h6>
+                    <ul class="nolist">
+                        <li>
+                            <a href="">LOOKUP YOUR KEY</a>
+                        </li>
+                        <li>
+                            <a href="">My Account</a>
+                        </li>
+                        <li>
+                            <a href="">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h6 class="text-uppercase uk-text-bold">PAYMENT & SHIPPING</h6>
+                    <ul class="nolist">
+                        <li>
+                            <a href=""></a>How to activate premium</li>
+                        <li>
+                            <a href=""></a>Refund Policy</li>
+                        <li>
+                            <a href=""></a>Estimated Delivery Time</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-md-0 mb-3">
+                    <h6 class="text-uppercase uk-text-bold">KOC TECHNOLOGY COMPANY LIMITED</h6>
+                    <ul class="nolist uk-text-small">
+                        <li>
+                            <i class="mr-1" uk-icon="icon:location"></i>Address: Duy Tan, Cau Giay, Ha Noi</li>
+                        <li>
+                            <i class="mr-1" uk-icon="icon:mail"></i>Email:
+                            <a href="mailto:support@keyoneclick.com">support@keyoneclick.com</a>
+                        </li>
+                        <li>
+                            <i class="mr-1" uk-icon="icon:list"></i>Working: Mon - Sun / 0:00 am - 16:00 pm GMT</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="border-top border-muted py-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-md-left text-center">
+                        <img data-src="/dist/images/visa.png" alt="" class="d-inline" uk-img>
+                    </div>
+                    <div class="col-md-6 text-md-right text-center py-md-0 py-2">
+                        <ul class="nolist d-inline-flex">
+                            <li><a href="" class="uk-icon-button bg-2 text-white mr-1" uk-icon="facebook"></a></li>
+                            <li><a href="" class="uk-icon-button bg-1 text-white mr-1" uk-icon="twitter"></a></li>
+                            <li><a href="" class="uk-icon-button bg-5 text-white mr-1" uk-icon="google-plus"></a></li>
+                            <li><a href="" class="uk-icon-button bg-secondary text-white mr-1" uk-icon="linkedin"></a></li>
+                            <li><a href="" class="uk-icon-button bg-danger text-white mr-1" uk-icon="pinterest"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>'
+        <section class="container text-center py-3">
+            © 2017 Key One Click. All Rights Reserved.
+        </section>
 </footer>
-
+</div>
 
 <script src="/dist/jquery/jquery-3.3.1.min.js"></script>
 <script src="/dist/gui/js/uikit.min.js"></script>
