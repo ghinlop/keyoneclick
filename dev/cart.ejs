@@ -1,0 +1,95 @@
+<%- include('./layout/header.ejs') -%>
+    <header class="py-3">
+        <%- include('./comp/nav.ejs') -%>
+    </header>
+    <main class="container">
+        <div class="d-block py-3">
+            <h5 class="text-dark mb-0 text-uppercase">buysellkey.com - secure checkout</h5>
+            <small class="text-muted">Depositfiles GOLD 180 days was added to your shopping cart.</small>
+        </div>
+        <div class="row">
+            <div class="col-md-8 cart-detail">
+                <table class="uk-table uk-table-small uk-table-striped uk-table-middle">
+                    <thead>
+                        <tr class="text-uppercase">
+                            <th>Items</th>
+                            <th>price</th>
+                            <th>qty</th>
+                            <th>subtotal</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let i = 0; i < 6; i++){ %>
+                            <tr>
+                                <td>DEPOSITFILES GOLD 180 DAYS</td>
+                                <td class="uk-text-large uk-text-bold">$44.95</td>
+                                <td>
+                                    <input type="number" class="uk-input uk-form-small uk-form-width-xsmall text-center" value="<%= i %>">
+                                </td>
+                                <td class="uk-text-large uk-text-bold">$44.95</td>
+                                <td class="text-center">
+                                    <a href="" uk-icon="check"></a>
+                                    <a href="" uk-icon="trash"></a>
+                                </td>
+                            </tr>
+                            <% } %>
+                    </tbody>
+                </table>
+
+                <div class="row border-top border-muted py-3">
+                    <div class="col-md-6 text-md-left text-center">
+                        <a href="/" class="btn btn-dark text-uppercase rounded-0">
+                            Continue shopping
+                        </a>
+                    </div>
+                    <div class="col-md-6 text-md-right text-center">
+                        <a href="/" class="btn btn-dark text-uppercase rounded-0 mr-md-1">
+                            clear cart
+                        </a>
+                        <a href="/" class="btn btn-dark text-uppercase rounded-0 mr-md-1">
+                            update cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-block border border-muted py-3">
+                <h4 class="text-uppercase">
+                    SUMMARY
+                </h4>
+                <div class="block bg-light border border-muted py-2 px-3 text-uppercase mt-3">
+                    ESTIMATE PRICE
+                </div>
+                <ul class="d-block nolist p-3">
+                    <li class="row border-bottom border-muted py-2">
+                        <div class="col-md-10">Subtotal</div>
+                        <div class="col-md-2 text-md-right">$88.89</div>
+                    </li>
+                    <li class="row border-bottom border-muted py-2">
+                        <div class="col-md-10">Shipping & Handling (Flat Rate - Fixed)</div>
+                        <div class="col-md-2 text-md-right">$0.00</div>
+                    </li>
+                    <li class="row border-bottom border-muted uk-text-bold py-2">
+                        <div class="col-md-10">Grand Total</div>
+                        <div class="col-md-2 text-md-right">$88.89</div>
+                    </li>
+                </ul>
+                <div class="block bg-light border border-muted py-2 px-3 text-uppercase mt-3">
+                    APPLY DISCOUNT CODE
+                </div>
+                <small class="d-block my-2">Enter your coupon code if you have one.</small>
+                <div class="d-block text-md-right text-center py-3">
+                    <input type="text" class="uk-input d-block" placeholder="Enter Coupon code">
+                    <a href="#" class="btn btn-dark rounded-0 text-uppercase mt-1">
+                        apply coupon
+                    </a>
+                </div>
+                <div class="d-block py-3 border-top border-muted">
+                    <a href="#" class="btn btn-warning btn-block rounded-0 text-uppercase mt-1">
+                        Checkout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('./layout/footer.ejs') -%>

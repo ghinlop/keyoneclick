@@ -25,7 +25,7 @@ nav {
                 @include bg-color(transparent, $color-5);
                 @include txt-color(#333, #fff) {
                     font-weight: bold;
-                    &[aria-expanded=true]{
+                    &[aria-expanded=true] {
                         background-color: $color-5;
                         color: #fff;
                     }
@@ -86,23 +86,27 @@ nav {
         color: #fff;
     }
 }
-.uk-dropdown{
+
+.uk-dropdown {
     z-index: 9999;
 }
+
 .item-bn {
     &:not(:last-child) {
         border-right: 1px solid #dee2e6;
     }
 }
-.table-cart{
+
+.table-cart {
     display: block;
     max-height: 250px;
     overflow: auto;
-    td{
+    td {
         padding: 5px;
         text-align: left;
     }
 }
+
 .plan-box {
     border: 1px solid #dee2e6;
     padding: 15px;
@@ -110,10 +114,12 @@ nav {
         border-color: $color-5;
     }
 }
-.step{
+
+.step {
     background: $color-3;
     position: relative;
-    &::before, &::after{
+    &::before,
+    &::after {
         content: '';
         height: 100%;
         width: 0;
@@ -123,18 +129,18 @@ nav {
         border-top: 26px solid transparent;
         border-bottom: 26px solid transparent;
     }
-    &::before{
+    &::before {
         left: -1px;
         border-left: 26px solid #fff;
     }
-    &::after{
+    &::after {
         left: 100%;
         border-left: 26px solid $color-3;
     }
-    &.last-end::after{
+    &.last-end::after {
         content: unset;
     }
-    .--number{
+    .--number {
         width: 35px;
         height: 35px;
         border: 1px solid #fff;
@@ -142,7 +148,7 @@ nav {
         margin-right: 10px;
         color: #fff;
         position: relative;
-        span{
+        span {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -151,25 +157,27 @@ nav {
         }
     }
 }
-.nav-profile{
+
+.nav-profile {
     padding: 0;
-    li{
-        a{
+    li {
+        a {
             color: #fff;
-            &:hover{
+            &:hover {
                 background-color: var(--blue);
             }
-        } 
-        
-        &:not(:last-child) a{
+        }
+        &:not(:last-child) a {
             border-right: 1px solid #eee;
         }
     }
 }
-.icon-payment{
+
+.icon-payment {
     max-width: 140px;
     display: inline-block;
 }
+
 footer {
     ul>li,
     ul>li>a {
@@ -178,7 +186,7 @@ footer {
 }
 
 @include md {
-    .uk-dropdown{
+    .uk-dropdown {
         min-width: 400px;
     }
     .uk-offcanvas {
@@ -200,34 +208,40 @@ footer {
 @include sm {
     .nav-header {
         position: static !important;
-        li{
-            &:not(:first-child){
+        li {
+            &:not(:first-child) {
                 border-bottom: 1px solid #555;
             }
-            >a{
+            >a {
                 display: block;
                 padding: 8px 0;
             }
         }
-        
     }
-    .--js-cart{
+    .--js-cart {
         position: static;
     }
-    .uk-dropdown{
-        left: unset!important;
+    .uk-dropdown {
+        left: unset !important;
         right: 0;
-        width: 100vw!important;
+        width: 100vw !important;
     }
-    .step:after{
+    .step:after {
         content: unset;
     }
-    .nav-profile{
+    .nav-profile {
         padding-right: 0;
-        li{
-            a{
+        li {
+            a {
                 font-size: 0.5em;
-            } 
+            }
+        }
+    }
+    .cart-detail {
+        max-width: 100%;
+        overflow-x: auto;
+        th, td{
+            font-size: 65%;
         }
     }
 }
