@@ -1,27 +1,27 @@
 <%- include('./layout/header.ejs') -%>
     <header class="py-3">
-        <%- include('./comp/nav.ejs') -%>
+        <%- include('./components/nav.ejs') -%>
     </header>
     <main class="bg-light py-3">
         <div class="container">
             <div class="row">
-                    <%- include('./comp/nav-profile.ejs') -%>
+                    <%- include('./components/nav-profile.ejs') -%>
                 <div class="col-md-12 bg-white py-3 border-bottom border-muted">
                     <h4 class="text-uppercase mb-3">Dashboard</h4>
-                    <p class="mb-0">Welcome
+                    <p class="mb-y">Welcome
                         <b class="mx-1">GhinLop!</b>
                     </p>
-                    <p class="mb-0 text-muted">
+                    <p class="mb-y text-muted">
                         From your My Account Dashboard you have the ability to view a snapshot of your recent account activity and update ayour account
                         infomation.
                     </p>
-                    <p class="mb-0 text-muted">Select a link below to view or edit infomation</p>
+                    <p class="mb-y text-muted">Select a link below to view or edit infomation</p>
                 </div>
                 <div class="col-md-12 bg-white py-3 border-bottom border-muted">
                     <div class="row">
                         <div class="col-md-6 border-right border-muted">
                             <h4 class="text-uppercase mb-3">My Credit Points</h4>
-                            <h3 class="text-info">41
+                            <h3 class="text-info my-0">41
                                 <small class="ml-2">($41.00)</small>
                             </h3>
                             <a class="d-block" href="/creditpoint.html">
@@ -30,7 +30,7 @@
                         </div>
                         <div class="col-md-6">
                             <h4 class="text-uppercase mb-3">Total Serial Purchase</h4>
-                            <h3 class="text-info">100</h3>
+                            <h3 class="text-info my-0">100</h3>
                             <a class="d-block" href="#">
                                 <small>Serial Manages</small>
                             </a>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-md-12 bg-white py-3 border-bottom border-muted">
                     <div class="row align-items-center mb-3">
-                        <h4 class="text-uppercase mb-0 col-md-11 col-10">My Profile</h4>
+                        <h4 class="text-uppercase my-0 col-md-11 col-10">My Profile</h4>
                         <div class="col-md-1 col-2">
                             <a class="d-block bg-3 text-white p-1 text-center" href="/edit-profile.html">
                                 <i class="fa fa-pencil fa-lg"></i>
