@@ -1,0 +1,29 @@
+<%- include('./layout/header.ejs') -%>
+    <header class="py-3">
+        <%- include('./components/nav.ejs') -%>
+    </header>
+    <main class="container">
+        <div class="d-block py-3">
+            <ul class="uk-breadcrumb">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <span>news</span>
+                </li>
+            </ul>
+        </div>
+        <ul class="nolist my-3">
+            <% for(let i = 0; i < 5; i++) { %>
+            <li class="mb-3 text-muted">
+                <a class="uk-h4 my-0 uk-text-bold" href="./news-detailt.html">
+                    How to activate DepositFiles Premium Key?
+                </a>
+                <small class="d-block border-bottom border-muted">Wednesday, September 6, 2017 1:15:23 PM Asia/Bangkok</small>
+                <p class="my-2">1. You will receive a voucher / coupon like this ( login:password ) : kvnn68xxx:dczkmnyyy</p>
+                <a class="color-3" href="./news-detailt.html"><small>Readmore</small></a>
+            </li>
+            <% } %>
+        </ul>
+    </main>
+    <%- include('./layout/footer.ejs') -%>

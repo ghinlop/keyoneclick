@@ -84,7 +84,7 @@
                                     </aside>
                                 </li>
                                 <li>
-                                    <a href="/">lookup key</a>
+                                    <a href="#lookup-key" uk-toggle>lookup key</a>
                                 </li>
                                 <li class="d-md-none">
                                     <a href="#">Login</a>
@@ -374,6 +374,20 @@
                 </div>
                 </nav>
             </div>
+        </div>
+    </div>
+    <div id="lookup-key" class="uk-modal-full shadow" uk-modal>
+        <div class="uk-modal-dialog h-100">
+            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+            <form action="">
+                <div class="d-block uk-position-center">
+                        <div class="uk-inline w-100">
+                        <input type="text" class="uk-input uk-form-large uk-form-width-large text-center d-block"
+                        placeholder="Enter Order ID">
+                        <button class="uk-form-icon uk-form-icon-flip" href="#" uk-icon="icon: search"></button>
+                        </div>
+                </div>
+            </form>
         </div>
     </div>    </header>
     <main class="bg-white py-3">

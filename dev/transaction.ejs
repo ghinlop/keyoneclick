@@ -1,0 +1,65 @@
+<%- include('./layout/header.ejs') -%>
+    <header class="py-3">
+        <%- include('./components/nav.ejs') -%>
+    </header>
+    <main class="container py-4">
+        <h2 class="text-muted border-bottom border-muted pb-2">
+            Transaction Detailt
+        </h2>
+        <div class="d-block px-3">
+            <div class="row border border-muted">
+                <div class="col-md-6 px-md-0 border-right border-muted">
+                    <table class="table table-striped">
+                        <thead class="bg-dark text-white text-center">
+                            <tr>
+                                <th colspan=2>Info</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-uk-bold">Order ID:</td>
+                                <td>XADXA21312213</td>
+                            </tr>
+                            <tr>
+                                <td class="text-uk-bold">Date:</td>
+                                <td><small><i>9/7/2018 15:30 PM</i></small></td>
+                            </tr>
+                            <tr>
+                                <td class="text-uk-bold">Price Total</td>
+                                <td>$,1000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-uk-bold">Payment Method</td>
+                                <td>Credit Card</td>
+                            </tr>
+                            <tr>
+                                <td class="text-uk-bold">Payment Status</td>
+                                <td><span class="badge badge-success">Success</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6 bg-light px-md-0">
+                    <table class="table table-striped">
+                        <thead class="bg-dark text-white">
+                            <tr>
+                                <th>Name</th>
+                                <th>Total</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(let i = 0; i < 5; i++) { %>
+                                <tr>
+                                    <td>Microsoft Office</td>
+                                    <td>3</td>
+                                    <td>$300</td>
+                                </tr>
+                                <% } %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('./layout/footer.ejs') -%>

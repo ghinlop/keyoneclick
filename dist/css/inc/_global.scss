@@ -23,7 +23,9 @@ a:hover, a:focus{
 .effect{
     @include effect;
 }
-
+.full-h-desk{
+    min-height: 100vh;
+}
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button,{
     appearance: none;
