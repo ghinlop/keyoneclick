@@ -1,0 +1,105 @@
+<%- include('./layout/header.ejs') -%>
+    <header class="py-3">
+        <%- include('./components/nav.ejs') -%>
+    </header>
+    <main class="container">
+        <div class="d-block py-3">
+            <ul class="uk-breadcrumb">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <span>Item Detailt</span>
+                </li>
+            </ul>
+        </div>
+        <div class="d-block mb-5">
+
+            <form action="">
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <div class="border border-muted p-3 d-md-inline-block text-center d-block">
+                            <img src="" alt="" uk-img="" data-src="./dist/images/logo/alldebrid-premium-key-200x75.png">
+                            <span class="d-block color-5">
+                                90 days
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-5 mb-3">
+                        <h1 class="uk-h2 uk-text-bold mb-2">Alfafile Premium 90 days</h1>
+                        <div class="d-block color-5">
+                            <i class="fa fa-check-square-o mr-1"></i>
+                            <span>In stock</span>
+                        </div>
+                        <div class="d-block text-danger uk-h3 my-2">
+                            $35.00
+                        </div>
+                        <div class="bg-light d-block p-2 text-center">
+                            <label class="uk-text-small d-md-inline-block d-block" for="qty">Qty:</label>
+                            <div class="uk-inline">
+                                <a href="#" class="uk-form-icon bg-secondary text-white" uk-icon="icon: minus; ratio: 0.8"></a>
+                                <input type="number" class="text-center border border-muted bg-white uk-input uk-form-width-small uk-form-small" style="padding: 0 10px!important"
+                                    value="0" max="10" min="1">
+                                <a href="#" class="uk-form-icon uk-form-icon-flip bg-secondary text-white" uk-icon="icon: plus; ratio: 0.8"></a>
+                            </div>
+                            <div class="d-md-inline d-block mt-md-0 mt-2 text-center">
+                                <button class="uk-button text-uppercase btn-warning py-2 ml-2 uk-text-small text-white" style="line-height: 1">buy now</button>
+                                <button class="uk-button text-uppercase uk-text-small uk-button-default border border-muted btn-outline-warning p-2 ml-2"
+                                    style="line-height: 1">add to cart</button>
+                            </div> 
+                        </div>
+                        <hr>
+                        <content class="d-block uk-text-small">
+                            <strong>
+                                Details
+                            </strong>
+                            <ul class="nolist">
+                                <li>
+                                    <strong>NO</strong> waiting
+                                </li>
+                                <li>
+                                    <strong>3 TB</strong> bandwidth
+                                </li>
+                                <li>
+                                    <strong>1 TB</strong> storage
+                                </li>
+                                <li>
+                            </ul>
+                        </content>
+                    </div>
+                    <div class="col-md-4 px-md-3 px-0">
+                        <div class="border border-muted">
+                            <div class="d-block">
+                                <div class="p-2 border-bottom border-muted uk-text-bold text-uppercase">
+                                    Related Products
+                                </div>
+                                <div class="p-2">
+                                    <p>Check items to add to the cart or select all</p>
+                                    <div class="d-block mb-2">
+                                        <input id="30day" type="checkbox" hidden="hidden" />
+                                        <label class="d-inline-block uk-text-small" for="30day">
+                                            <a href="#">
+                                                Alfafile Premium 30 days
+                                            </a>
+                                            <span class="uk-h4 my-0 d-block ml-4 pl-2 text-danger">$15.60</span>
+                                        </label>
+                                    </div>
+                                    <div class="d-block mb-2">
+                                        <input id="90day" type="checkbox" hidden="hidden" />
+                                        <label class="d-inline-block uk-text-small" for="90day">
+                                            <a href="#">
+                                                PremiumLinkGenerator Premium 90 days
+                                            </a>
+                                            <span class="uk-h4 my-0 d-block ml-4 pl-2 text-danger">$29.99</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include('./layout/footer.ejs') -%>

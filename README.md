@@ -1,5 +1,8 @@
 # KeyOneClick Template Clone
 
+## Update Version 2.0.2
+- update Item detailt page
+
 ## Update Version 2.0.1
 - Update page
     - News list
